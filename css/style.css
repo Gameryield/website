@@ -42,6 +42,27 @@ h2{
 .community ul li svg:hover path{
     fill: #ff008f;
 }
+
+#chartContainer .p0_lineGroup path {
+    stroke: #fff;
+}
+
+#chartContainer .p0_labels-outer text {
+    fill: #fff !important;
+}
+
+#chartContainer .p0_labelGroup-inner text {
+    font-size: 16px !important;
+}
+
+#chartContainer .p0_labelGroup-inner.smaller text {
+    font-size: 8px !important;
+}
+
+#chartContainer .p0_arc path {
+    stroke: transparent !important;
+}
+
 .footer-corner {
     width: 5px;
     height: 25px;
@@ -624,10 +645,22 @@ a.canvasjs-chart-credit{
 .total-tokan {
     width: 80%;
     margin-left: auto;
-    margin-top: -60px;
+    margin-top: 50px;
 }
+
 div#chartContainer {
     padding-top: 12px;
+    position: relative;
+}
+#chartContainer:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #070d2f;
+    width: 120px;
+    z-index: 999;
+    height: 20px;
 }
  /* DISTRIBUTION  end*/
  /* governamne-deatils start*/
@@ -1148,6 +1181,13 @@ body .mobile-view-icon{
     }
 }
 @media screen and (max-width: 767px) {
+    #chartContainer:before{
+        background: #07103b;
+        top: 10px;
+        left: 0px;
+        width: 64px;
+        height: 13px;
+    }
     body{
         background-image: none;
     }
